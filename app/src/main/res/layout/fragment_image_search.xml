@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.HomeFragment">
+
+
+<data class="ImageSearchBinding">
+
+
+
+</data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/whit_gradient"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/lalezar"
+                android:text="@string/search_here"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="8dp"
+                android:elevation="4dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/white"
+                android:indeterminateTintMode="src_atop"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/txtNotFound"
+                app:layout_constraintStart_toStartOf="@+id/txtNotFound"
+                app:layout_constraintTop_toBottomOf="@+id/txtNotFound" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtInputSearch"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingRight="8dp"
+                android:gravity="center"
+                android:textColorHint="@color/black"
+                android:background="@drawable/input_background_white"
+                android:hint="@string/write_something"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:text="@string/search_subtitle3"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/appCompatTextView3"
+                app:layout_constraintTop_toBottomOf="@+id/edtInputSearch" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:text="@string/search_subtitle1"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView13" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:text="@string/search_subtitle2"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/appCompatTextView3"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3" />
+
+
+            <FrameLayout
+                android:id="@+id/adContainer"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_margin="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/black_stroke"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView4">
+
+
+            </FrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/imageRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/adContainer"
+                app:spanCount="3"
+                tools:listitem="@layout/searched_image_item_model" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtNotFound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lalezar"
+                android:text="@string/notFound"
+                android:drawableTop="@drawable/ic_round_search_off_24"
+                android:drawableTint="@color/white"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtInputSearch" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
+
+
+
+</layout>

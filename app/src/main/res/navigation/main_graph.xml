@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="da.reza.spy.ui.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/HomeToWordList"
+            app:destination="@id/wordListFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/HomeToInformation"
+            app:destination="@id/informationFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/HomeToScoreList"
+            app:destination="@id/playerScoreFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            />
+        <action
+            android:id="@+id/HomeToStarter"
+            app:destination="@id/starterFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/wordListFragment"
+        android:name="da.reza.spy.ui.fragment.WordListFragment"
+        android:label="WordListFragment" >
+        <action
+            android:id="@+id/WordListToImageSearch"
+            app:destination="@id/imageSearchFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/WordListToSuggestWord"
+            app:destination="@id/suggestWordFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/showGameCardsFragment"
+        android:name="da.reza.spy.ui.fragment.ShowGameCardsFragment"
+        android:label="ShowGameCardsFragment" >
+        <action
+            android:id="@+id/GameCardsToTimer"
+            app:destination="@id/TimerToGameCards"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/GameCardToHome"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/TimerToGameCards"
+        android:name="da.reza.spy.ui.fragment.TimerFragment"
+        android:label="TimerFragment" >
+        <action
+            android:id="@+id/TimerPage_To_gameCard"
+            app:destination="@id/showGameCardsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/TimerToHome"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageSearchFragment"
+        android:name="da.reza.spy.ui.fragment.ImageSearchFragment"
+        android:label="ImageSearchFragment" />
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="da.reza.spy.ui.fragment.InformationFragment"
+        android:label="fragment_information"
+        tools:layout="@layout/fragment_information" />
+    <fragment
+        android:id="@+id/suggestWordFragment"
+        android:name="da.reza.spy.ui.fragment.SuggestWordFragment"
+        android:label="SuggestWordFragment" />
+    <fragment
+        android:id="@+id/playerScoreFragment"
+        android:name="da.reza.spy.ui.fragment.PlayerScoreFragment"
+        android:label="fragment_player_score"
+        tools:layout="@layout/fragment_player_score" />
+    <fragment
+        android:id="@+id/starterFragment"
+        android:name="da.reza.spy.ui.fragment.StarterFragment"
+        android:label="StarterFragment" >
+        <action
+            android:id="@+id/StarterToGameCard"
+            app:destination="@id/showGameCardsFragment" />
+    </fragment>
+</navigation>

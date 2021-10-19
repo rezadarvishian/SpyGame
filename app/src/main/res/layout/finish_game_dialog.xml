@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="FinishGameBinding">
+
+
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:id="@+id/bottomSheetFilter">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btnBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="180dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="180dp">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/detectiveIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/detective"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="180dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/spyNameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTitle">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/lalezar"
+                        android:gravity="center"
+                        android:text=" جاسوس : "
+                        android:textColor="@color/red"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtSpyNames"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/lalezar"
+                        android:gravity="center"
+                        android:text="جاسوس : "
+                        android:textColor="@color/red"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtPlayAgain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/lalezar"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:text="جاسوس : "
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@+id/spyNameLayout" />
+
+                <FrameLayout
+                    android:id="@+id/adContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/black_stroke"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPlayAgain">
+
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/adContainer"
+                    app:layout_constraintVertical_bias="0.0">
+
+
+                    <da.reza.spy.ui.custom.CustomButton
+                        android:id="@+id/btnConfirm"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_background_green"
+                        android:fontFamily="@font/lalezar"
+                        android:text="کلمه ها"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/btnStartGame"
+                        app:layout_constraintStart_toEndOf="@+id/btnSetting"
+                        app:layout_constraintTop_toBottomOf="@+id/btnStartGame"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <da.reza.spy.ui.custom.CustomButton
+                        android:id="@+id/btnCancel"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_background_red"
+                        android:fontFamily="@font/lalezar"
+                        android:text="کلمه ها"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/btnStartGame"
+                        app:layout_constraintStart_toEndOf="@+id/btnSetting"
+                        app:layout_constraintTop_toBottomOf="@+id/btnStartGame"
+                        app:layout_constraintVertical_bias="0.0" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

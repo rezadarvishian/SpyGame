@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <variable
+            name="item"
+            type="da.reza.spy.data.model.GameCardItem" />
+
+    </data>
+
+   <com.google.android.material.card.MaterialCardView
+       android:layout_width="match_parent"
+       app:cardCornerRadius="@dimen/def_radius"
+       android:elevation="0dp"
+       app:cardElevation="0dp"
+       android:layout_margin="@dimen/small_margin"
+       android:layout_height="wrap_content">
+
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:background="@color/white"
+           android:layout_height="wrap_content">
+
+
+           <com.google.android.material.card.MaterialCardView
+               android:id="@+id/materialCardView"
+               android:layout_width="60dp"
+               android:layout_height="60dp"
+               android:elevation="0dp"
+               app:cardCornerRadius="@dimen/def_radius"
+               app:cardElevation="0dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent">
+
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/cardImage"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:scaleType="centerCrop"
+                       loadImage="@{item.cardImage}"
+                       android:src="@drawable/ic_launcher_background"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+           </com.google.android.material.card.MaterialCardView>
+
+           <androidx.appcompat.widget.SwitchCompat
+               android:id="@+id/autoDeleteSwitch"
+               android:layout_width="wrap_content"
+               android:checked="@{item.autoDelete}"
+               android:layout_height="wrap_content"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/cardName"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="8dp"
+               android:fontFamily="@font/lalezar"
+               android:gravity="right"
+               android:text="@{item.cardName.toString()}"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+               app:layout_constraintBottom_toBottomOf="@+id/autoDeleteSwitch"
+               app:layout_constraintEnd_toStartOf="@+id/materialCardView"
+               app:layout_constraintStart_toEndOf="@+id/autoDeleteSwitch"
+               app:layout_constraintTop_toTopOf="@+id/autoDeleteSwitch" />
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+   </com.google.android.material.card.MaterialCardView>
+
+
+</layout>

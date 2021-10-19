@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheetFilter">
+
+<data class="SettingDialogBinding">
+
+</data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="4dp"
+            app:cardCornerRadius="@dimen/def_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_background_red">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:fontFamily="@font/lalezar"
+                    android:gravity="center"
+                    android:text="@string/setting"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:animateLayoutChanges="true"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnMusicSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGameDescription">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView8"
+                    style="@style/TextView_16Sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/lalezar"
+                    android:gravity="center_vertical"
+                    android:text="@string/music_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iconMusic"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background_red"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatTextView8"
+                    app:srcCompat="@drawable/ic_round_music_note_24"
+                    app:tint="@color/white" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnGameDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/btnMusicSwitch"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView28"
+                    style="@style/TextView_16Sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/lalezar"
+                    android:gravity="center_vertical"
+                    android:text="@string/game_des"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background_green"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatTextView8"
+                    app:srcCompat="@drawable/ic_lamp"
+                    app:tint="@color/white" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnSoundSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/btnMusicSwitch"
+                app:layout_constraintTop_toBottomOf="@+id/btnMusicSwitch">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView208"
+                    style="@style/TextView_16Sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/lalezar"
+                    android:gravity="center_vertical"
+                    android:text="@string/music_title2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iconSound"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background_yellow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatTextView8"
+                    app:srcCompat="@drawable/ic_round_music_note_24"
+                    app:tint="@color/white" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnEmailUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="60dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/btnSoundSwitch"
+                app:layout_constraintTop_toBottomOf="@+id/btnSoundSwitch"
+                app:layout_constraintVertical_bias="0.0">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView328"
+                    style="@style/TextView_16Sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/lalezar"
+                    android:gravity="center_vertical"
+                    android:text="@string/emailToUs_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnAddPlayerss"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background_blue"
+                    android:padding="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatTextView8"
+                    app:srcCompat="@drawable/ic_round_email_24"
+                    app:tint="@color/white" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="16dp"
+                android:animateLayoutChanges="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnEmailUs"
+                app:layout_constraintVertical_bias="0.0">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtAboutUs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/about_us"
+                    android:textColor="@color/purple_500"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnEmailUs" />
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/creatorTextViews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:fontFamily="@font/lalezar"
+                        android:gravity="center"
+                        android:lineSpacingExtra="5dp"
+                        android:text="@string/developerName"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:typeface="sans"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnEmailUs" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:fontFamily="@font/lalezar"
+                        android:gravity="center"
+                        android:lineSpacingExtra="5dp"
+                        android:text="@string/designerName"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:typeface="sans"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnEmailUs" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/version"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView15" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</layout>

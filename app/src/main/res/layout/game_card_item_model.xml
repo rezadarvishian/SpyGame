@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/small_margin"
+        app:cardCornerRadius="@dimen/def_radius"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/purple_500"
+            android:layout_height="180dp">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/frontImageView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/detective_one" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtPlayerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple_500"
+                android:gravity="center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:padding="4dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/disableColor"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:background="#F2505050"
+                android:orientation="vertical">
+
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/visitedImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/hat"/>
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="دیده شد"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/lalezar"
+                    android:elevation="2dp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

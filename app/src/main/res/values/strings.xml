@@ -1,0 +1,142 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">جاسوس بازی</string>
+
+
+    <string name="ResponseCode500">خطا در سمت سرور</string>
+    <string name="start">شروع</string>
+    <string name="game">بازی</string>
+    <string name="spy">جاسوس</string>
+    <string name="find_spy">باید دنبال جاسوس بگردی</string>
+    <string-array name="HomeTitleStrings">
+        <item>باید دنبال جاسوس بگردی</item>
+        <item>شروع بازی رو بزن و شروع کنین</item>
+        <item>جاسوس یکی از شماست ، شایدم خودت جاسوسی :)</item>
+        <item>تو زمان تعیین شده بازی رو تموم کنین</item>
+        <item>کلمه های خودت رو اضافه کن و با بقیه سرگرم شو</item>
+        <item>عکس اضافه کن و بازی رو برای جاسوس سخت تر کن</item>
+    </string-array>
+    <string name="search_here">جستجوی تصویر : اینجا میتونی اسمش رو جستجو کنی </string>
+    <string name="notFound">فعلا که چیزی پیدا نشده . . . </string>
+    <string name="player_score_notFound">فعلا که اطلاعات بازیکنی ثبت نشده . . . </string>
+    <string name="add_word_here">اینجا میتونی هر کلمه ای که میخوای تو بازی باشه رو اضافه کنی </string>
+    <string name="show_card_fragment_title1">اینجا دیگه مشخص میشه جاسوس کیه! وقت بازیه بچه ها </string>
+    <string name="timer_fragment_title">خب دیگه زمان کمی مونده تا جاسوس رو پیدا کنین \n بهتره سریعتر شروع کنین </string>
+    <string name="show_card_fragment_title2">یه کارت انتخاب کن</string>
+    <string name="write_something" tools:ignore="TypographyEllipsis">یه چیزی بنویس ... </string>
+    <string name="add_photo_hint" tools:ignore="TypographyEllipsis">اگه میخوای یه عکس اضافه کن ... </string>
+    <string name="search_subtitle1">* اگه انگلیسی بنویسی نتایج خیلی دقیق تر میشه \n  (فارسی باشه قبلش ترجمه میشه ممکنه غلط باشه)</string>
+    <string name="search_subtitle3">* طبق معمول باید فیلترشکن روشن کنی تا کار کنه</string>
+    <string name="search_subtitle2">* با انتخاب هر تصویر ، اسم و  تصویرش به لیست کلمه ها اضافه میشه</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="image_dialog_subtitle">اینجا میتونی اسمش رو تغییر بدی و ذخیره اش کنی</string>
+    <string name="btn_save_word">ثبت کلمه</string>
+    <string name="btn_add_word">میخوام کلمه اضافه کنم</string>
+    <string name="submit_changes">تغییرش دادم ، ذخیره کن</string>
+    <string name="edit_word">دستکاری کردن کلمه</string>
+    <string name="game_card_error" tools:ignore="Typos">آخ آخ انگار بازی مشکل داره ، میشه یه بار دیگه شروع کنی ؟ </string>
+    <string name="delete_after_played">بعد بازی حذف شه ؟</string>
+    <string name="search_box_hint">تو لیست بگرد</string>
+    <string name="exit_title">میخوای ول کنی بری ؟ </string>
+    <string name="accessDeniedTitle">واسه اینکه از گالریت عکس انتخاب کنی برنامه باید دسترسی داشته باشه! </string>
+    <string name="exit_title2">میخوای وسط بازی ول کنی بری ؟ </string>
+    <string name="spyNotFoundTitle">آخرشم نتونستین جاسوس رو پیدا کنین \n ولی اشکال نداره یه دور دیگه بازی کنین </string>
+    <string name="spyFoundTitle"> ایول بالاخره جاسوس پیدا شد \n میخواین بازم بازی کنین ؟  </string>
+    <string name="spyFoundConfirmButton"> اره ، بزن بریم  </string>
+    <string name="spyNotFoundConfirmButton"> بازم بازی  </string>
+    <string name="spyFoundCancelButton"> واسه امروز بسه  </string>
+    <string name="spyNotFoundCancelButton"> واسه امروز بسه  </string>
+    <string name="exit_dialog_cancel_button">خب حالا! میمونم</string>
+    <string name="accessDeniedCancelTitle">نه ولش کن </string>
+    <string name="accessDeniedConfirmTitle">بریم تنظیمات </string>
+    <string name="wordListIsEmpty">لیست کلمه ها رو ترکوندی ، نمیشه بازی کرد که! برو کلمه اضافه کن </string>
+    <string name="exit_dialog_confirm_button">اره ولم کن</string>
+    <string name="spyNotFound" tools:ignore="Typos">آخ آخ </string>
+    <string name="starter_bottom_sheet_title">آماده سازی بازی</string>
+    <string name="player_count">چند نفرید ؟</string>
+    <string name="player_count_subtitle">ببین کمتر از 3 نفر اصلا راه نداره!</string>
+    <string name="spy_count">چندتا جاسوس  ؟</string>
+    <string name="spy_count_subtitle">خیلی هم تعداد جاسوس رو بالا ببری بازی بی مزه میشه ها!</string>
+    <string name="time_count_Subtitle">کمترش کنی هیجان بالاتر میره!!</string>
+    <string name="time_count">چقد زمان لازمه ؟ </string>
+    <string name="play_with_name">اگه میخوای نتایج ثبت بشه اسم بچه ها رو وارد کن!</string>
+    <string name="starter_bottom_sheet_title2">نتیجه اش شده این:</string>
+    <string name="this_round_players">بازیکنای این دور بازی :</string>
+    <string name="this_round_players_empty">به تعداد کل بازیکن ها باید اسم وارد کنی \n میتونی از لیست پایین انتخاب کنی</string>
+    <string name="all_player_names">همه بازیکن های ثبت شده </string>
+    <string name="all_player_names_empty">تا حالا بازیکنی ثبت نکردی \n این پایین میتونی اضافه کنی </string>
+    <string name="starter_bottom_sheet_confirm">خوبه همین، بزن بریم</string>
+    <string name="setting">تنظیمات</string>
+    <string name="image_dialog_title">کلمه رو یادت باشه</string>
+    <string name="image_dialog_button">فهمیدم!</string>
+    <string name="music_title">موسیقی رو قطع کن</string>
+    <string name="game_des">بازی چطوریه ؟ </string>
+    <string name="music_title2">صداهای داخل بازی هم اضافیه!</string>
+    <string name="emailToUs_title">کاری چیزی داری ؟ تعارف نکن</string>
+    <string name="deleted">حذف شد</string>
+    <string name="deleteAll">حذف همه</string>
+    <string name="close">بستن</string>
+    <string name="add_image">بذار یه عکس هم بذارم</string>
+    <string name="add_image_second">خوشم نیومد ، یکی دیگه</string>
+    <string name="add_image_title">اضافه کردن کلمه</string>
+    <string name="add_image_submit">ثبتش کن بره</string>
+    <string name="add_image_hint">کلمه رو اینجا بنویس</string>
+    <string name="add_playerName_hint">نفر جدید ؟ اسمشو اینجا بنویس </string>
+    <string name="delete_question">میخوای همه رو به فنا بدی ؟ </string>
+    <string name="delete_question_yes">آره، پاک کن </string>
+    <string name="delete_question_No">نه، دستم خورد! </string>
+    <string name="_btn_edit_word">ثبت تغییرات</string>
+    <string name="word_list_info_dialog_title">راهنمایی و این چیزا</string>
+    <string name="word_list_info_dialog_title1">کار کردن باهاش راحته همین چند مورد پایینه</string>
+    <string name="word_list_info_dialog_title2">سمت چپ یا راست بکشی اون کلمه حذف میشه</string>
+    <string name="word_list_info_dialog_title4">اگه روی عکسش کلیک کنی میتونی ویرایشش کنی</string>
+    <string name="word_list_info_dialog_title3">این دیگه خطریه! \n اگه میخوای همه کلمات رو به فنا بدی دکمه پایین بزن</string>
+    <string name="choose_image">انتخاب تصویر</string>
+    <string name="crop_and_confirm">برش و تایید</string>
+    <string name="spyFound">جاسوس پیدا شد</string>
+    <string name="info_dialog_title">راهنمایی و این چیزا</string>
+    <string name="stopGame">بسه ، خسته شدیم</string>
+    <string name="beAvailableSoon">به زودی فعال میشه :) </string>
+    <string name="tapsellError">\"نمایش بنر های تبلیغاتی با مشکل رو به رو شده میشه یه بار دیگه بازی رو ببندی و باز کنی ؟ \"</string>
+
+    <string name="suggest_title">جستجوی کلمات مشابه : اینجا میتونی مشابه ها رو جستجو کنی </string>
+
+    <string name="suggest_subtitle1">* میتونی اینجا کلمات مشابه رو ببینی و به لیست اضافه کنی</string>
+    <string name="suggest_subtitle2">دکمه اضافه کردن رو بزنی مستقیم اضافه میشه به لیست</string>
+    <string name="file_stram_error">خیلی شرمنده نتونستم فایل رو باز کنم صفحه رو میبندم</string>
+    <string name="about_us">این بازی کار کیه؟</string>
+    <string name="version">نسخه : 1.3</string>
+    <string name="developerName">برنامه نویس : \n رضا درویشیان</string>
+    <string name="designerName">ظاهر و طراحی کاراکتر ها : \n رانیه کرمی</string>
+    <string name="gameStartsByYou">بازی از تو شروع میشه</string>
+
+    <string-array name="gameWord">
+        <item>بیمارستان</item>
+        <item>موز</item>
+        <item>اسباب بازی</item>
+        <item>مسافرت</item>
+        <item>بانک</item>
+        <item>کیف پول</item>
+        <item>ماشین</item>
+        <item>سردرد</item>
+        <item>خاله زنک بازی</item>
+        <item>عینک</item>
+        <item>ازدواج</item>
+        <item>کتاب</item>
+        <item>پرچم</item>
+        <item>صندلی</item>
+        <item>میمون</item>
+        <item>آرایشگاه</item>
+        <item>خلبان</item>
+        <item>جنگل</item>
+        <item>خر</item>
+        <item>منچ</item>
+        <item>آدم بیکار</item>
+        <item>خوابیدن</item>
+        <item>تابلو نقاشی</item>
+        <item>خورشید</item>
+        <item>آبگرمکن</item>
+        <item>حمام</item>
+    </string-array>
+
+</resources>

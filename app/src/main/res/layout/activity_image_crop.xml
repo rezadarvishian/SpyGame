@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.customView.ImageCropActivity">
+
+
+    <data class="CropImageBinding">
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/whit_gradient"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="@string/choose_image"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:fontFamily="@font/lalezar"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnBack"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <da.reza.spy.ui.custom.CustomImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:padding="8dp"
+                android:rotationY="180"
+                android:background="@drawable/button_background_red"
+                android:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_round_arrow_back_24" />
+
+            <da.reza.spy.ui.custom.CustomImageView
+                android:id="@+id/btnFlip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/button_background_yellow"
+                android:padding="8dp"
+                android:tint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_flip_24"
+                app:tint="@color/white" />
+
+            <da.reza.spy.ui.custom.CustomImageView
+                android:id="@+id/btnRotate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/button_background_yellow"
+                android:padding="8dp"
+                android:tint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnFlip"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_rotate_left_24"
+                app:tint="@color/white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.canhub.cropper.CropImageView
+            android:id="@+id/cropImageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:elevation="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonLayout"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
+            tools:layout_editor_absoluteX="8dp" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/buttonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <da.reza.spy.ui.custom.CustomButton
+                android:id="@+id/btnOpenGallery"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background_blue"
+                android:gravity="center"
+                android:text="انتخاب از گالری"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+            <da.reza.spy.ui.custom.CustomButton
+                android:id="@+id/btnConfirm"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background_green"
+                android:text="@string/crop_and_confirm"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.HomeFragment">
+
+    <data class="ShowGameCardBinding">
+
+    </data>
+
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:overScrollMode="never"
+    android:paddingBottom="24dp"
+    android:clipToPadding="false"
+    android:background="@drawable/whit_gradient"
+    android:layout_height="match_parent">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/lalezar"
+                android:gravity="center"
+                android:text="@string/show_card_fragment_title1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/lalezar"
+                android:gravity="center"
+                android:text="@string/show_card_fragment_title2"
+                android:textColor="@color/red"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView6" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appCompatImageView5"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="-10dp"
+                android:rotation="360"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+                app:srcCompat="@drawable/zarebin" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/constraintLayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/gameCardRecyclerView"
+                app:layout_constraintStart_toStartOf="@+id/gameCardRecyclerView"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView7">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_margin="4dp"
+                    android:elevation="0dp"
+                    app:cardCornerRadius="@dimen/def_radius"
+                    app:cardElevation="0dp">
+
+                    <FrameLayout
+                        android:id="@+id/adContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/black_stroke">
+
+
+                    </FrameLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/gameCardRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:paddingBottom="24dp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                app:spanCount="2"
+                tools:listitem="@layout/game_card_item_model" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
+
+
+</androidx.core.widget.NestedScrollView>
+
+
+</layout>

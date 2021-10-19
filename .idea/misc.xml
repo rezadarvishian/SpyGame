@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/bg_gray_corner_radius.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/bg_white_corner_radius.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/black_stroke.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/button_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/button_background_blue.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/button_background_green.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/button_background_red.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/button_background_yellow.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/gradient.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/gradient_progress.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/ic_add_word.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/ic_baseline_image_search_24.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/ic_lamp.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/ic_outline_info_24.xml" value="0.15859375" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/ic_play.xml" value="0.22552083333333334" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/ic_player.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/ic_round_email_24.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/ic_round_equalizer_24.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/ic_round_search_24.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/ic_round_search_off_24.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/ic_round_settings_24.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/ic_round_share_24.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/ic_win.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/input_background_white.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/whit_gradient.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/drawable/white_top_radius.xml" value="0.169140625" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/activity_image_crop.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/activity_main.xml" value="0.17" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/activity_splash.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/add_word_dialog.xml" value="0.2" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/finish_game_dialog.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/fragment_image_search.xml" value="0.2" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/fragment_information.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/fragment_player_score.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/fragment_show_game_cards.xml" value="0.18" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/fragment_starter.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/fragment_suggest_word.xml" value="0.16" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/fragment_timer.xml" value="0.22" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/fragment_word_list.xml" value="0.18" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/game_card_item_model.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/game_card_item_model_back.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/game_card_item_model_front.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/image_dialog_layout.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/native_ad_banner.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/native_image_ad_banner.xml" value="0.146484375" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/player_name_item.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/player_score_item.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/question_dialog.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/searched_image_item_model.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/setting_bottom_sheet.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/show_uamge_dialog.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/starter_bottom_sheet.xml" value="0.16" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/suggest_word_item.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/word_item_model.xml" value="0.2" />
+        <entry key="..\:/APK/Spy/app/src/main/res/layout/word_list_info_dialog.xml" value="0.15703125" />
+        <entry key="..\:/APK/Spy/app/src/main/res/xml/network_security_config.xml" value="0.12986111111111112" />
+        <entry key="..\:/APK/Spy/app/src/main/res/xml/remot_config_def.xml" value="0.15703125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

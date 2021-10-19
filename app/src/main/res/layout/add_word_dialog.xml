@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheetFilter">
+
+
+    <data class="AddWordDialogBinding">
+
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:background="@drawable/white_top_radius"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/imageLayout"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:elevation="0dp"
+            app:cardElevation="0dp"
+            android:visibility="gone"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="@dimen/def_radius">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="right"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewLayout">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/autoDeleteSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="16dp"
+                android:fontFamily="@font/lalezar"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/lalezar"
+                android:gravity="right"
+                android:text="بعد اینکه بازی شد، خود به خود حذف شه ؟"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/autoDeleteSwitch"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.521" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtInputName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_gray_corner_radius"
+            android:gravity="right|center_vertical"
+            android:hint="@string/add_image_hint"
+            android:maxLines="1"
+            android:paddingRight="8dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="12dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtAddImage"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:layout_margin="4dp"
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/ic_round_touch_app_24"
+                android:drawablePadding="8dp"
+                android:elevation="2dp"
+                android:background="@drawable/button_background_yellow"
+                android:fontFamily="@font/lalezar"
+                android:gravity="center"
+                android:text="@string/add_image"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewLayout"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewLayout"
+                app:layout_constraintStart_toStartOf="@+id/imageViewLayout"
+                app:layout_constraintTop_toTopOf="@+id/imageViewLayout" />
+
+
+            <da.reza.spy.ui.custom.CustomButton
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_background_green"
+                android:fontFamily="@font/lalezar"
+                android:text="@string/add_image_submit"
+                android:imeOptions="actionDone"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtInputName"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>

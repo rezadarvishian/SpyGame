@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="StarterFragmentBinding">
+
+
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/whit_gradient"
+        android:animateLayoutChanges="true"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/inputLayout"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:clipToPadding="false"
+                android:paddingBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView8"
+                    style="@style/TextView_16Sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/lalezar"
+                    android:gravity="center_vertical"
+                    android:text="@string/player_count"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView9"
+                    style="@style/TextView_12Sp_black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/lalezar"
+                    android:gravity="center_vertical"
+                    android:text="@string/player_count_subtitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnMinusPlayer"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView8" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnAddPlayer"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/button_background_green"
+                    app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatTextView8"
+                    app:srcCompat="@drawable/ic_round_add_24"
+                    app:tint="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtPlayerCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/lalezar"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="3"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnAddPlayer"
+                    app:layout_constraintStart_toEndOf="@+id/btnAddPlayer"
+                    app:layout_constraintTop_toTopOf="@+id/btnAddPlayer" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnMinusSpy"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/button_background_red"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnAddSpy"
+                    app:layout_constraintStart_toEndOf="@+id/txtPlayerCount"
+                    app:layout_constraintTop_toTopOf="@+id/btnAddSpy"
+                    app:srcCompat="@drawable/ic_round_remove_24"
+                    app:tint="@color/white" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView82"
+                    style="@style/TextView_16Sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/lalezar"
+                    android:gravity="center_vertical"
+                    android:text="@string/spy_count"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView9" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView8w2"
+                    style="@style/TextView_12Sp_black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/lalezar"
+                    android:gravity="center_vertical"
+                    android:text="@string/spy_count_subtitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnMinusSpy"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView82" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnAddSpy"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/button_background_green"
+                    app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView8w2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatTextView82"
+                    app:srcCompat="@drawable/ic_round_add_24"
+                    app:tint="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtSpyCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/lalezar"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnAddSpy"
+                    app:layout_constraintStart_toEndOf="@+id/btnAddPlayer"
+                    app:layout_constraintTop_toTopOf="@+id/btnAddSpy" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnMinusPlayer"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/button_background_red"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnAddPlayer"
+                    app:layout_constraintStart_toEndOf="@+id/txtPlayerCount"
+                    app:layout_constraintTop_toTopOf="@+id/btnAddPlayer"
+                    app:srcCompat="@drawable/ic_round_remove_24"
+                    app:tint="@color/white" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView82w"
+                    style="@style/TextView_16Sp_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/lalezar"
+                    android:gravity="center_vertical"
+                    android:text="@string/time_count"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView8w2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextViewص8w2"
+                    style="@style/TextView_12Sp_black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/lalezar"
+                    android:gravity="center_vertical"
+                    android:text="@string/time_count_Subtitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnMinusTime"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView82w" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnAddTime"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/button_background_green"
+                    app:layout_constraintBottom_toBottomOf="@+id/appCompatTextViewص8w2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatTextView82w"
+                    app:srcCompat="@drawable/ic_round_add_24"
+                    app:tint="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtTimeCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/lalezar"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="3"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnAddTime"
+                    app:layout_constraintStart_toEndOf="@+id/btnAddPlayer"
+                    app:layout_constraintTop_toTopOf="@+id/btnAddTime" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnMinusTime"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/button_background_red"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnAddTime"
+                    app:layout_constraintStart_toEndOf="@+id/txtPlayerCount"
+                    app:layout_constraintTop_toTopOf="@+id/btnAddTime"
+                    app:srcCompat="@drawable/ic_round_remove_24"
+                    app:tint="@color/white" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextViewص8w2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView16"
+                    style="@style/TextView_16Sp_black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/lalezar"
+                    android:gravity="center_vertical"
+                    android:text="@string/play_with_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/playWithNameWitch"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatImageView6" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/playWithNameWitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView16"
+                    app:layout_constraintStart_toStartOf="@+id/btnAddTime"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatTextView16" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/addNameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/playWithNameWitch">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtPlayerNameTitle"
+                        style="@style/TextView_16Sp_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/lalezar"
+                        android:gravity="center_vertical"
+                        android:text="@string/this_round_players"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/switchCompat"
+                        app:layout_constraintTop_toBottomOf="@+id/appCompatTextViewص8w2" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/thisRoundPLayerRecycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:spanCount="3"
+                            tools:listitem="@layout/player_name_item" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/emptyThisRoundPlayerList"
+                            style="@style/TextView_16Sp_black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/lalezar"
+                            android:text="@string/this_round_players_empty"
+                            android:textColor="@color/red"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextView_16Sp_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/lalezar"
+                        android:gravity="center_vertical"
+                        android:text="@string/all_player_names"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/switchCompat"
+                        app:layout_constraintTop_toBottomOf="@+id/appCompatTextViewص8w2" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/allPLayerRecycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:spanCount="3"
+                            tools:listitem="@layout/player_name_item" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/emptyAllPlayerList"
+                            style="@style/TextView_16Sp_black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/lalezar"
+                            android:text="@string/all_player_names_empty"
+                            android:textColor="@color/red"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/inputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/btnPlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnAddName"
+                android:layout_width="55dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_background_green"
+                app:layout_constraintBottom_toBottomOf="@+id/appCompatTextViewص8w2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/appCompatTextView82w"
+                app:srcCompat="@drawable/ic_round_add_24"
+                app:tint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtInputName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_gray_corner_radius"
+                android:gravity="right|center_vertical"
+                android:hint="@string/add_playerName_hint"
+                android:imeOptions="actionGo"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColorHint="@color/black"
+                android:paddingRight="8dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <da.reza.spy.ui.custom.CustomButton
+            android:id="@+id/btnPlay"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_background_green"
+            android:fontFamily="@font/lalezar"
+            android:text="@string/starter_bottom_sheet_confirm"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

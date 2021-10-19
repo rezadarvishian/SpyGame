@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.HomeFragment">
+
+    <data class="HomeBinding">
+
+
+
+    </data>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/whit_gradient"
+            android:layout_height="match_parent">
+
+
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationView"
+                android:layout_width="440dp"
+                android:layout_height="330dp"
+                android:layout_marginBottom="-20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/skyline" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/buttonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+                <da.reza.spy.ui.custom.CustomButton
+                    android:id="@+id/btnStartGame"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:soundEffectsEnabled="true"
+                    android:background="@drawable/button_background_blue"
+                    android:fontFamily="@font/lalezar"
+                    android:text="شروع بازی"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <da.reza.spy.ui.custom.CustomButton
+                    android:id="@+id/btnWordPage"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:soundEffectsEnabled="true"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button_background_green"
+                    android:fontFamily="@font/lalezar"
+                    android:text="کلمه ها"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/btnStartGame"
+                    app:layout_constraintStart_toEndOf="@+id/btnSetting"
+                    app:layout_constraintTop_toBottomOf="@+id/btnStartGame"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <da.reza.spy.ui.custom.CustomImageView
+                    android:id="@+id/btnScoreList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:paddingLeft="10dp"
+                    android:soundEffectsEnabled="true"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/button_background_yellow"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnWordPage"
+                    app:layout_constraintStart_toStartOf="@+id/btnStartGame"
+                    app:layout_constraintTop_toTopOf="@+id/btnWordPage"
+                    app:srcCompat="@drawable/ic_round_equalizer_24"
+                    app:tint="@color/white" />
+
+                <da.reza.spy.ui.custom.CustomImageView
+                    android:id="@+id/btnSetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:paddingLeft="10dp"
+                    android:soundEffectsEnabled="true"
+                    android:paddingRight="10dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/button_background_red"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnWordPage"
+                    app:layout_constraintStart_toEndOf="@+id/btnScoreList"
+                    app:layout_constraintTop_toTopOf="@+id/btnWordPage"
+                    app:srcCompat="@drawable/ic_round_settings_24"
+                    app:tint="@color/white" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:id="@+id/adContainer"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/black_stroke"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonLayout">
+
+
+            </FrameLayout>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="-40dp"
+                android:rotation="35"
+                android:layout_marginTop="-30dp"
+                app:layout_constraintEnd_toEndOf="@+id/adContainer"
+                app:layout_constraintTop_toTopOf="@+id/adContainer"
+                app:srcCompat="@drawable/hat" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/characterIcon"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="-5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/detective" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
+
+
+
+</layout>
