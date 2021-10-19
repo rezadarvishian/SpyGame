@@ -72,7 +72,7 @@
 
 <p style="text-align:center"><strong>&nbsp;.اگر میخواین طبق اسم پیش ببرین بازی رو میتونین اسم بازیکنارو موقع شروع بازی بنویسی </strong></p>
 
-<p style="text-align:center"><span style="color:#f39c12"><strong>که آخر بازی بهت بگم جاسوس کی بوده 😁 نباشه کسی بخواد کلک بزنه</strong></span></p>
+<p style="text-align:center"><span style="color:#e74c3c">که آخر بازی بهت بگم جاسوس کی بوده 😁 نباشه کسی بخواد کلک بزنه</span></p>
 
 <p style="text-align:center"><span style="color:#ffffff"><strong>دوتا چیز دیگه :</strong></span></p>
 

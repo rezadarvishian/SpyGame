@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() {
     @AddTrace(name = "mainActivityOnCreate", enabled = true)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        viewModel.checkFirstRun()
         setContentView(R.layout.activity_main)
         observeViewModel()
         initTapsellPlus()

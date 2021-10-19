@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -28,6 +29,8 @@ import kotlinx.coroutines.flow.onEach
 import org.koin.core.component.KoinApiExtension
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
+import java.lang.Exception
+import java.lang.reflect.Executable
 
 @KoinApiExtension
 class SettingDialog:BottomSheetDialogFragment() , KoinComponent {
@@ -44,6 +47,7 @@ class SettingDialog:BottomSheetDialogFragment() , KoinComponent {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        isCancelable = true
         setStyle(STYLE_NORMAL, R.style.NewDialog)
     }
 
@@ -71,11 +75,12 @@ class SettingDialog:BottomSheetDialogFragment() , KoinComponent {
 
 
         binding.btnEmailUs.setOnClickListener {
-            val emailIntent = Intent(Intent.ACTION_SEND)
-            emailIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            emailIntent.type = "vnd.android.cursor.item/email"
-            emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("reza.da9@gmail.com"))
-            requireActivity().startActivity(Intent.createChooser(emailIntent, "Send mail using..."))
+            try {
+                val emailIntent = Intent(Intent.ACTION_VIEW, Uri.parse("mailto:" + "email_to"))
+                emailIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("reza.da9@gmail.com"))
+                requireActivity().startActivity(Intent.createChooser(emailIntent, "Send mail using..."))
+            }catch (e:Exception){}
         }
 
         binding.btnMusicSwitch.setOnClickListener {

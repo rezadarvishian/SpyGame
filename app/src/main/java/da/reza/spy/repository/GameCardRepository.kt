@@ -38,6 +38,13 @@ class GameCardRepository(
         return card
     }
 
+    fun isFirstRun(): Boolean {
+        return AppPreferences.isFirstRun
+    }
+
+    fun setFirstRun(Bool: Boolean) {
+        AppPreferences.isFirstRun = Bool
+    }
 
 
 

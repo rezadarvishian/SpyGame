@@ -14,8 +14,10 @@ import androidx.lifecycle.lifecycleScope
 import da.reza.spy.ui.dialog.SettingDialog
 import da.reza.spy.utiles.animateInvisible
 import da.reza.spy.utiles.animateVisible
+import da.reza.spy.utiles.observeInLifecycle
 import org.koin.core.component.KoinApiExtension
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.onEach
 
 
 class HomeFragment : BaseFragment<HomeBinding>(R.layout.fragment_home) {
@@ -30,10 +32,20 @@ class HomeFragment : BaseFragment<HomeBinding>(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         characterAnimation()
+        firstRunViewVisibility()
         binding.btnWordPage.setOnClickListener { findNavController().navigate(R.id.HomeToWordList) }
         binding.btnScoreList.setOnClickListener { findNavController().navigate(R.id.HomeToScoreList) }
         binding.btnStartGame.setOnClickListener { findNavController().navigate(R.id.HomeToStarter) }
         binding.btnSetting.setOnClickListener { SettingDialog().show(requireActivity().supportFragmentManager,"setting") }
+        binding.btnGameDescription.setOnClickListener {
+            viewLifecycleOwner.lifecycleScope.launchWhenResumed {
+                binding.characterIcon.animateInvisible(binding.constraintLayout)
+                delay(400)
+                findNavController().navigate(R.id.HomeToInformation)
+                viewModel.setFirstRun(false)
+            }
+
+        }
     }
 
     private fun openExitDialog(){
@@ -76,6 +88,17 @@ class HomeFragment : BaseFragment<HomeBinding>(R.layout.fragment_home) {
         }
     }
 
+
+    private fun firstRunViewVisibility(){
+        viewModel.firstRun.onEach {
+           if (it){
+               viewLifecycleOwner.lifecycleScope.launchWhenCreated {
+                   delay(1000)
+                   binding.btnGameDescription.animateVisible(binding.parentView)
+               }
+           }
+        }.observeInLifecycle(this)
+    }
 
 
 }

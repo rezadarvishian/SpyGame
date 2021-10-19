@@ -17,11 +17,10 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parentView"
             android:layout_width="match_parent"
             android:background="@drawable/whit_gradient"
             android:layout_height="match_parent">
-
-
 
 
             <com.airbnb.lottie.LottieAnimationView
@@ -35,7 +34,6 @@
                 app:lottie_autoPlay="true"
                 app:lottie_loop="true"
                 app:lottie_rawRes="@raw/skyline" />
-
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/buttonLayout"
@@ -126,7 +124,6 @@
 
             </FrameLayout>
 
-
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="100dp"
                 android:layout_height="50dp"
@@ -163,6 +160,23 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+
+            <da.reza.spy.ui.custom.CustomButton
+                android:id="@+id/btnGameDescription"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:paddingLeft="10dp"
+                android:layout_margin="50dp"
+                android:soundEffectsEnabled="true"
+                android:paddingRight="10dp"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:drawableRight="@drawable/ic_lamp"
+                android:text="@string/readGameDes"
+                android:background="@drawable/button_background_yellow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:tint="@color/white"/>
 
 
 

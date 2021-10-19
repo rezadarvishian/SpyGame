@@ -41,7 +41,6 @@ class SplashActivity : AppCompatActivity() {
                     viewModel.insertGameCard(it, "", false)
                 }
                 viewModel.setSetting(SettingEntity(isMusicEnable = true, isSoundEnable = true))
-                viewModel.setFirstRun(false)
                 characterAnimation()
             }else {
                 characterAnimation()

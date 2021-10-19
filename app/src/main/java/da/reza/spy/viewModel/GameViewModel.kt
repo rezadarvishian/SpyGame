@@ -1,5 +1,6 @@
 package da.reza.spy.viewModel
 
+import android.util.Log
 import android.util.Patterns
 import android.webkit.URLUtil
 import androidx.databinding.ObservableInt
@@ -30,6 +31,8 @@ import kotlin.random.Random
 class GameViewModel(private val repositoryInterface: GameCardRepository) : ViewModel() {
 
 
+    private val _firstRun = Channel<Boolean>(Channel.BUFFERED)
+    val firstRun = _firstRun.receiveAsFlow()
 
     private val _playerNumber = MutableLiveData<Int>(3)
     val playerNumber: LiveData<Int> = _playerNumber
@@ -65,6 +68,16 @@ class GameViewModel(private val repositoryInterface: GameCardRepository) : ViewM
     val isSoundEnable = repositoryInterface.isSoundEnable()
 
 
+
+    fun checkFirstRun(){
+        viewModelScope.launch {
+            _firstRun.send(repositoryInterface.isFirstRun())
+        }
+    }
+
+    fun setFirstRun(bool: Boolean) {
+        repositoryInterface.setFirstRun(bool)
+    }
 
     fun changePLayerCount(count:Int){
         val playerNumber = (_playerNumber.value?:3)+count
@@ -157,8 +170,10 @@ class GameViewModel(private val repositoryInterface: GameCardRepository) : ViewM
                }
             }
 
+
+            gameCardList[Random.nextInt(0,gameCardList.size-1)].isStarterPlayer = true
+            Log.i("test" , gameCardList.size.toString())
             gameCardList.shuffle()
-            gameCardList[0].isStarterPlayer = true
             _startGame.send(true)
             _gameCardForPlay.postValue(gameCardList)
         }

@@ -105,10 +105,11 @@
     <string name="suggest_subtitle2">دکمه اضافه کردن رو بزنی مستقیم اضافه میشه به لیست</string>
     <string name="file_stram_error">خیلی شرمنده نتونستم فایل رو باز کنم صفحه رو میبندم</string>
     <string name="about_us">این بازی کار کیه؟</string>
-    <string name="version">نسخه : 1.3</string>
+    <string name="version">نسخه : 1.4</string>
     <string name="developerName">برنامه نویس : \n رضا درویشیان</string>
     <string name="designerName">ظاهر و طراحی کاراکتر ها : \n رانیه کرمی</string>
     <string name="gameStartsByYou">بازی از تو شروع میشه</string>
+    <string name="readGameDes">قبل شروع لطفا توضیحات بازی رو بخون</string>
 
     <string-array name="gameWord">
         <item>بیمارستان</item>

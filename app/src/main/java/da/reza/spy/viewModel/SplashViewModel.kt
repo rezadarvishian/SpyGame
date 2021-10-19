@@ -24,9 +24,6 @@ class SplashViewModel(private val repo:SplashScreenRepository):ViewModel() {
        }
     }
 
-    fun setFirstRun(bool: Boolean) {
-        repo.setFirstRun(bool)
-    }
 
     fun insertGameCard(word: String, url: String, cardState: Boolean , id:Int?=null) = viewModelScope.launch {
         val item = GameCardItem(id = id, cardName = word, cardImage = url, autoDelete = cardState)
