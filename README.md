@@ -18,13 +18,10 @@ This repository contains a detailed game app that implements simple game using K
 #### The app has using api:
 1. **Pixabay**: Free Pixaby Api used to search For Images.[🚨Website](https://pixabay.com)
 2. **VazheYab**: Paid Dictionary Api used to search For Synonymous words and translate Persian To English.[🚨Website](https://www.vajehyab.com)
-
-#### The app has following packages:
-1. **data**: It contains all the data accessing and manipulating components.
-2. **di**: Dependency providing classes using Koin.
-3. **ui**: View classes along with their corresponding ViewModel.
-4. **utils**: Utility classes.
-3. **ViewModel**: all viewModel Classes.
+3. **Firebase**: firebase api used to Crashlytics , Analytics , in-AppMessaging and CloudMessaging.[🚨Website](https://www.firebase.google.com)
+```
+Note : For Using Firebase futures add your google-services.json
+```
 
 ### For Using this Source Code Add this line to your gradle.properties file
 
@@ -35,6 +32,17 @@ NATIVE_AD_ZONE_ID = "Your tapsell ad Zone Id"
 VAZHEYAB_TOKEN = "Your VazheYab Api Key"
 
 ```
+
+#### The app has following packages:
+1. **data**: It contains all the data accessing and manipulating components.
+2. **di**: Dependency providing classes using Koin.
+3. **ui**: View classes along with their corresponding ViewModel.
+4. **utils**: Utility classes.
+3. **ViewModel**: all viewModel Classes.
+
+
+
+
 
 ## License
 
