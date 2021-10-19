@@ -5,7 +5,7 @@
 
 
 
-This repository contains a detailed game app that implements simple game using Koin, Room, Coroutines, Flow,Channel ,  Navigation Component , Retrofit , Service , AlarmManager and unitTest
+This repository contains a detailed game app that implements simple game using Koin, Room, Coroutines, Flow,Channel , Navigation Component , Retrofit , Services and unit Test
 <p align="center">
   <img src="https://user-images.githubusercontent.com/55354691/137774572-35149482-17cb-49c3-be9c-2b415d5d90ea.jpg" width="250">
   <img src="https://user-images.githubusercontent.com/55354691/137774665-ca90e7ca-2fa0-4920-8eb2-f23178cf40e9.jpg" width="250">
