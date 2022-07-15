@@ -58,7 +58,7 @@ class PlayMediaService : Service() {
 
         val pendingIntent = PendingIntent.getActivity(
             this, 0 /* Request code */, intent,
-            PendingIntent.FLAG_ONE_SHOT
+            PendingIntent.FLAG_IMMUTABLE
         )
 
         val channelId = "SpyTimer"

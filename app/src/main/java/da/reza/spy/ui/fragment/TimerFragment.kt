@@ -165,7 +165,7 @@ class TimerFragment : BaseFragment<TimerBinding>(R.layout.fragment_timer) {
     private fun setAlarm(time:Long){
         val am = requireContext().getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val i = Intent(context, TimerAlarm::class.java)
-        val pi = PendingIntent.getBroadcast(context, 0, i, FLAG_UPDATE_CURRENT)
+        val pi = PendingIntent.getBroadcast(context, 0, i, FLAG_IMMUTABLE)
         am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,time,pi)
 
     }
@@ -174,7 +174,7 @@ class TimerFragment : BaseFragment<TimerBinding>(R.layout.fragment_timer) {
     private fun cancelAlarm(){
         val am = requireContext().getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val i = Intent(context, TimerAlarm::class.java)
-        val pi = PendingIntent.getBroadcast(context, 0, i, FLAG_UPDATE_CURRENT)
+        val pi = PendingIntent.getBroadcast(context, 0, i, FLAG_IMMUTABLE)
         am.cancel(pi)
         timer?.cancel()
         requireActivity().stopService(Intent(requireContext(),PlayMediaService::class.java))
